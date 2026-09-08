@@ -13,8 +13,8 @@ import os
 import random
 import sys
 
-from dotenv import load_dotenv
 import vk_api
+from dotenv import load_dotenv
 from vk_api.longpoll import VkEventType, VkLongPoll
 
 from gigachat_client import GigachatClient, GigachatClientError
@@ -134,7 +134,7 @@ class VKGigaChatBot:
                 user_id: int = event.user_id
                 peer_id: int = event.peer_id
                 self._handle_message(user_id, peer_id, event.text)
-            except Exception:  # noqa: BLE001 — бот не должен падать на одном событии
+            except Exception:  # бот не должен падать на одном событии
                 logger.exception("Ошибка при обработке события ВКонтакте")
 
 
