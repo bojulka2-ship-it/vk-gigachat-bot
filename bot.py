@@ -12,7 +12,6 @@ import logging
 import os
 import random
 import sys
-from typing import Optional
 
 from dotenv import load_dotenv
 import vk_api
